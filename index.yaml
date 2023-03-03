@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   grafana:
   - apiVersion: v2
-    appVersion: 9.3.6
-    created: "2023-03-01T09:20:44.6217059Z"
+    appVersion: 9.3.8
+    created: "2023-03-03T08:07:16.296207108Z"
     description: The leading tool for querying and visualizing time series and metrics.
-    digest: 8e2adc993f8f61fecadfc105eb6ddf98fc27d7f1d2992546f003c861f48df190
+    digest: 27c1853e011e7b1bd1cf17589057653c0d8c3900d168494ba4c5d3cd733c642e
     home: https://grafana.net
     icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
     kubeVersion: ^1.8.0-0
@@ -25,99 +25,15 @@ entries:
     - https://github.com/grafana/grafana
     type: application
     urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/grafana-6.51.1/grafana-6.51.1.tgz
-    version: 6.51.1
-  grafana-agent-operator:
-  - apiVersion: v2
-    appVersion: 0.32.0
-    created: "2023-03-01T09:20:44.8593315Z"
-    description: A Helm chart for Grafana Agent Operator
-    digest: 33d6a35f3c6e145b87172b75976e65d514318f4f8315252fc67ef948723180c6
-    home: https://grafana.com/docs/agent/v0.32/
-    icon: https://raw.githubusercontent.com/grafana/agent/v0.32.0/docs/sources/assets/logo_and_name.png
-    maintainers:
-    - email: grafana-agent-team@googlegroups.com
-      name: Grafana Agent Team
-    name: grafana-agent-operator
-    sources:
-    - https://github.com/grafana/agent/tree/v0.32.0/pkg/operator
-    type: application
-    urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/grafana-agent-operator-0.2.13/grafana-agent-operator-0.2.13.tgz
-    version: 0.2.13
-  loki-distributed:
-  - apiVersion: v2
-    appVersion: 2.7.3
-    created: "2023-03-01T09:20:45.079663648Z"
-    description: Helm chart for Grafana Loki in microservices mode
-    digest: 33a2d3b322c9d853af107cef3b1a7c7ee250b2901e69ddb6716ca28f45bccb52
-    home: https://grafana.github.io/helm-charts
-    icon: https://grafana.com/docs/loki/latest/logo_and_name.png
-    maintainers:
-    - name: unguiculus
-    name: loki-distributed
-    sources:
-    - https://github.com/grafana/loki
-    - https://grafana.com/oss/loki/
-    - https://grafana.com/docs/loki/latest/
-    type: application
-    urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/loki-distributed-0.69.6/loki-distributed-0.69.6.tgz
-    version: 0.69.6
-  loki-stack:
-  - apiVersion: v1
-    appVersion: v2.6.1
-    created: "2023-03-01T09:20:45.364408265Z"
-    dependencies:
-    - condition: loki.enabled
-      name: loki
-      repository: https://grafana.github.io/helm-charts
-      version: ^2.15.2
-    - condition: promtail.enabled
-      name: promtail
-      repository: https://grafana.github.io/helm-charts
-      version: ^6.7.4
-    - condition: fluent-bit.enabled
-      name: fluent-bit
-      repository: https://grafana.github.io/helm-charts
-      version: ^2.3.0
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: ~6.43.0
-    - condition: prometheus.enabled
-      name: prometheus
-      repository: https://prometheus-community.github.io/helm-charts
-      version: ~15.5.3
-    - condition: filebeat.enabled
-      name: filebeat
-      repository: https://helm.elastic.co
-      version: ~7.17.1
-    - condition: logstash.enabled
-      name: logstash
-      repository: https://helm.elastic.co
-      version: ~7.17.1
-    description: 'Loki: like Prometheus, but for logs.'
-    digest: e489d89a0dea6ee836fe877362e8cb01caff93e23eb168f558bf31d5e13a676c
-    home: https://grafana.com/loki
-    icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
-    kubeVersion: ^1.10.0-0
-    maintainers:
-    - email: lokiproject@googlegroups.com
-      name: Loki Maintainers
-    name: loki-stack
-    sources:
-    - https://github.com/grafana/loki
-    urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/loki-stack-2.9.9/loki-stack-2.9.9.tgz
-    version: 2.9.9
+    - https://github.com/mhoyer/grafana-helm-charts/releases/download/grafana-6.51.3/grafana-6.51.3.tgz
+    version: 6.51.3
   promtail:
   - apiVersion: v2
-    appVersion: 2.7.3
-    created: "2023-03-01T09:20:45.569918081Z"
+    appVersion: 2.7.4
+    created: "2023-03-03T08:07:16.503477582Z"
     description: Promtail is an agent which ships the contents of local logs to a
       Loki instance
-    digest: 960abad697b980a861d2be54e1470846a33b5f8b40dd2b56ab103301e49a3bdf
+    digest: b0e92b8c3b97afba9942526594f45d0122188094058f449eb5e724d42a8792aa
     home: https://grafana.com/loki
     icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
     maintainers:
@@ -131,12 +47,12 @@ entries:
     - https://grafana.com/docs/loki/latest/
     type: application
     urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/promtail-6.9.1/promtail-6.9.1.tgz
-    version: 6.9.1
+    - https://github.com/mhoyer/grafana-helm-charts/releases/download/promtail-6.9.2/promtail-6.9.2.tgz
+    version: 6.9.2
   tempo-distributed:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2023-03-01T09:20:45.801417475Z"
+    created: "2023-03-03T08:07:16.744710252Z"
     dependencies:
     - alias: minio
       condition: minio.enabled
@@ -149,7 +65,7 @@ entries:
       repository: https://grafana.github.io/helm-charts
       version: 0.2.2
     description: Grafana Tempo in MicroService mode
-    digest: af0989364e94ed41926050bdc8f2782e7ae31a62870f23ee89e03fcca20ed4f1
+    digest: df3b7bebad365db4c45f30154f6e61bc074fc5e088a38763532d4bf88907a1b6
     home: https://grafana.com/docs/tempo/latest/
     icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
     maintainers:
@@ -168,6 +84,6 @@ entries:
     - https://github.com/grafana/tempo
     type: application
     urls:
-    - https://github.com/mhoyer/grafana-helm-charts/releases/download/tempo-distributed-1.2.1/tempo-distributed-1.2.1.tgz
-    version: 1.2.1
-generated: "2023-03-01T09:20:45.801428376Z"
+    - https://github.com/mhoyer/grafana-helm-charts/releases/download/tempo-distributed-1.2.2/tempo-distributed-1.2.2.tgz
+    version: 1.2.2
+generated: "2023-03-03T08:07:16.744722152Z"
